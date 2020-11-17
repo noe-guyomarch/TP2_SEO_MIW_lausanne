@@ -1,0 +1,213 @@
+
+// impotation du reset css, variables et autre
+@import 'imports/_reset.scss';
+
+@import 'imports/_flaticon.scss';
+
+
+
+// definition des fonts
+@font-face {
+    font-family: berina;
+    src: url(../font/BerninaSans_CondensedBold.woff2);
+}
+
+@font-face {
+    font-family: gotham;
+    src: url(../font/Gotham_HTF_Book.ttf);
+}
+
+
+html, body{
+    height: 100%;
+}
+
+a{
+    color: white;
+}
+a:hover{
+    color: white;
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+
+.page{
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: white;
+    background: linear-gradient(#333235, #5a5a5a);
+
+    height: 70px;
+    padding: 0px 15px;
+
+    .logo-container{
+        width: 100px;
+    }
+    >div:nth-of-type(2){
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 20px;
+    }
+    .navbar-right{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 85px;
+        font-size: 15px;
+
+        >div>a{
+            padding: 13px;
+        }
+
+        // not displayed in mobile mode
+
+        .flaticon-clouds-and-sun, .delimiter, >div:nth-of-type(4){
+            display: none;
+        }
+    }
+}
+.navbar-left{
+    display: none;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+.navbar-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    div{
+        width: 100%;
+        padding: 1px 0px;
+    }
+
+    a{
+        display: flex;
+        justify-content: center;
+
+        width: 100%;
+        padding: 20px;
+        font-weight: 650;
+        background-color: rgba(0,0,0,0.6);
+        color: white;
+        font-size: 20px;
+        font-family: gotham;
+
+    }
+}
+
+// desktop version
+@media screen and (min-width: 768px) {
+
+    header{
+        height: 85px;
+        padding: 0px 20px;
+    
+        .logo-container{
+            width: 180px;
+        }
+        >div:nth-of-type(2){
+            font-size: 30px;
+        }
+        .navbar-right{
+            width: 240px;
+            font-size: 20px;
+
+    
+            // displayed in desktop mode
+            .flaticon-clouds-and-sun{
+                display: initial;
+                font-size: 30px;
+            }
+            .delimiter{
+                display: initial;
+                height: 30px;
+                border-right: 1px solid white;
+            }
+            >div:nth-of-type(4){
+                display: initial;
+            }
+        }
+    }
+    
+    .navbar-left{
+        display: flex;
+        // position: fixed;
+        // top: 30%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #1481ca;
+        width: 55px;
+
+        >div{
+            display: flex;
+            >a{
+                display: flex;
+                width: 100%;
+                padding: 20px;
+                font-size: 23px
+            }
+            .drop{
+                display: none;
+                width: 110px;
+                text-align: center;
+            }
+
+            >a:hover{
+                // background-color: #023e66;
+                // padding-right: 30px;
+            }
+        }
+        
+        >div:hover>.drop{
+            margin-left: 2px;  
+            width: 400px; 
+
+            background-color: #023e66;
+            display: initial;
+
+        }
+
+
+    }
+    
+
+    .navbar-bottom{
+        flex-direction: row;
+        div{
+            padding: 0px 1px;
+        }
+
+        a{    
+            padding: 15px; 
+            font-size: 17px;
+        }
+    }
+
+
+}
+// 
