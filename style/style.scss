@@ -1,27 +1,23 @@
 
-// impotation du reset css, variables et autre
+// import css reset, vars and other
 @import 'imports/_reset.scss';
 
 @import 'imports/_flaticon.scss';
 
 
 
-// definition des fonts
-@font-face {
-    font-family: berina;
-    src: url(../font/BerninaSans_CondensedBold.woff2);
-}
-
+//fonts family
 @font-face {
     font-family: gotham;
     src: url(../font/Gotham_HTF_Book.ttf);
 }
 
-
+// define html and body to fill screen width
 html, body{
     height: 100%;
 }
 
+// default behaviour for <a> tag
 a{
     color: white;
 }
@@ -32,15 +28,16 @@ a:hover{
 }
 
 
+// container of all elements
 .page{
     width: 100%;
     height: 100%;
 
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
+    // define background img and set it
     background-image: url(../img/background.jpg);
     background-size: cover;
     background-position: center;
@@ -48,6 +45,7 @@ a:hover{
     background-attachment: fixed;
 }
 
+// define container for logo, name, and navbar-right
 header{
     display: flex;
     align-items: center;
@@ -79,21 +77,25 @@ header{
             padding: 13px;
         }
 
-        // not displayed in mobile mode
-
+        // not displayed in mobile mode (cloud and temp)
         .flaticon-clouds-and-sun, .delimiter, >div:nth-of-type(4){
             display: none;
         }
     }
 }
+
+//not displayed in mobile mode (socials navbar) 
 .navbar-left{
     display: none;
 }
 
+// container of the navbar-bottom, center navbar-bottom
 .center{
     display: flex;
     justify-content: center;
 }
+
+// 80% of parents, and items take 100% of parents
 .navbar-bottom{
     display: flex;
     flex-direction: column;
@@ -107,6 +109,7 @@ header{
     a{
         display: flex;
         justify-content: center;
+        text-align: center;
 
         width: 100%;
         padding: 20px;
@@ -115,13 +118,13 @@ header{
         color: white;
         font-size: 20px;
         font-family: gotham;
-
     }
 }
 
 // desktop version
 @media screen and (min-width: 768px) {
 
+    // header height, logo and navbar-right bigger, cloud and temp displayed
     header{
         height: 85px;
         padding: 0px 20px;
@@ -153,6 +156,7 @@ header{
         }
     }
     
+    // navbar-left displayed and hovered
     .navbar-left{
         display: flex;
         // position: fixed;
@@ -199,8 +203,7 @@ header{
         opacity: 1;
     }
 
-    
-
+    // navbar-bottom change disposition and size
     .navbar-bottom{
         flex-direction: row;
         div{
@@ -212,7 +215,4 @@ header{
             font-size: 17px;
         }
     }
-
-
 }
-// 

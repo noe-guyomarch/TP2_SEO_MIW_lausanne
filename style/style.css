@@ -408,11 +408,6 @@ template {
 }
 
 @font-face {
-  font-family: berina;
-  src: url(../font/BerninaSans_CondensedBold.woff2);
-}
-
-@font-face {
   font-family: gotham;
   src: url(../font/Gotham_HTF_Book.ttf);
 }
@@ -434,7 +429,6 @@ a:hover {
 .page {
   width: 100%;
   height: 100%;
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -540,6 +534,7 @@ header .navbar-right .flaticon-clouds-and-sun, header .navbar-right .delimiter, 
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
   width: 100%;
   padding: 20px;
   font-weight: 650;
