@@ -368,7 +368,7 @@ template {
   text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
+  -font-smoothing: antialiased;
 }
 
 .flaticon-instagram:before {
@@ -537,7 +537,7 @@ header .navbar-right .flaticon-clouds-and-sun, header .navbar-right .delimiter, 
   text-align: center;
   width: 100%;
   padding: 20px;
-  font-weight: 650;
+  font-weight: 700;
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
   font-size: 20px;
