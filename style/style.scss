@@ -177,23 +177,28 @@ header{
                 text-align: center;
             }
 
-            >a:hover{
-                // background-color: #023e66;
-                // padding-right: 30px;
-            }
         }
         
         >div:hover>.drop{
-            margin-left: 2px;  
-            width: 400px; 
-
-            background-color: #023e66;
-            display: initial;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-right: 20px;
+            font-size: 20px;
+            font-family: gotham;
 
         }
 
-
     }
+    .navbar-left>div:hover{
+        width: 200px;
+        margin-left: 137px;
+        background-color: #023e66;
+    }
+    .navbar-left>div:hover a{
+        opacity: 1;
+    }
+
     
 
     .navbar-bottom{

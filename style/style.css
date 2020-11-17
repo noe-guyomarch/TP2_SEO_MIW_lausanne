@@ -612,10 +612,26 @@ header .navbar-right .flaticon-clouds-and-sun, header .navbar-right .delimiter, 
     text-align: center;
   }
   .navbar-left > div:hover > .drop {
-    margin-left: 2px;
-    width: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-right: 20px;
+    font-size: 20px;
+    font-family: gotham;
+  }
+  .navbar-left > div:hover {
+    width: 200px;
+    margin-left: 137px;
     background-color: #023e66;
-    display: initial;
+  }
+  .navbar-left > div:hover a {
+    opacity: 1;
   }
   .navbar-bottom {
     -webkit-box-orient: horizontal;
