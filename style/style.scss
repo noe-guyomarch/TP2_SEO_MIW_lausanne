@@ -36,6 +36,7 @@ a:hover{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
 
     // define background img and set it
     background-image: url(../img/background.jpg);
@@ -159,8 +160,8 @@ header{
     // navbar-left displayed and hovered
     .navbar-left{
         display: flex;
-        // position: fixed;
-        // top: 30%;
+        position: fixed;
+        top: 30%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
